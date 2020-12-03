@@ -20,7 +20,9 @@ export const Banner:React.FC = () => {
           <Link href="https://github.com/chmenegatti">
             <IconButton aria-label="My GitHub" icon={ <Icon as={FiGithub} /> } />
           </Link>
-          <IconButton aria-label="My Discord" icon={ <Icon as={SiFacebook} /> } />
+          <Link href="https://www.facebook.com/chmenegatti">
+            <IconButton aria-label="My Discord" icon={ <Icon as={SiFacebook} /> } />
+          </Link>
           <DarkModeSwitch />
         </HStack>
       </HStack>
