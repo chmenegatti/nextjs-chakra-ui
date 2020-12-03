@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box } from '@chakra-ui/react';
+import { Box, Grid } from '@chakra-ui/react';
 import { Banner } from '../components/Banner';
 import Repositories from '../components/Repositories';
 import { GetStaticProps } from 'next';
@@ -24,6 +24,7 @@ const IndexPage: React.FC<IIndexPage> = ({ repositories }) => {
     <Box as="main">
       <Banner />
         <Box as="section" padding={2} maxW="1024px" marginX="auto">
+          <Grid templateColumns={[ "auto", "repeat(auto-fill, minmax(50%, 1fr))"]}>
           { repositories.map(repo => (
             <Repositories
               key={repo.id}
@@ -35,6 +36,7 @@ const IndexPage: React.FC<IIndexPage> = ({ repositories }) => {
               url={repo.html_url}
             />
           ))}
+          </Grid>
         </Box>
     </Box>
   );

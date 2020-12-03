@@ -25,7 +25,7 @@ const Repositories:React.FC<IRepos> = ({ description, license, pushed_at, name, 
       mt={4}
     >
       <Grid templateColumns={"11fr 1fr"} >
-        <Box p="4" maxWidth="90%">
+        <Box p="4" maxWidth="85%" height="160px">
           <Box d="flex" alignItems="baseline">
             <Badge borderRadius="full" px="2" colorScheme="cyan" textTransform="capitalize">
               {license}
